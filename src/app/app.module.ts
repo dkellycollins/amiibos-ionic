@@ -10,24 +10,30 @@ import { AmiibosListComponent } from './amiibos-list/amiibos-list.component';
 import { AmiibosService } from './services/amiibos.service';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
+import { AmiiboDetailPageComponent } from './amiibo-detail-page/amiibo-detail-page.component';
+import { AmiiboDetailComponent } from './amiibo-detail/amiibo-detail.component';
 
 @NgModule({
   declarations: [
     App,
     AmiibosListPageComponent,
-    AmiibosListComponent
+    AmiibosListComponent,
+    AmiiboDetailPageComponent,
+    AmiiboDetailComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     HttpModule,
     IonicModule.forRoot(App),
-    IonicPageModule.forChild(AmiibosListPageComponent)
+    IonicPageModule.forChild(AmiibosListPageComponent),
+    IonicPageModule.forChild(AmiiboDetailPageComponent)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     App,
-    AmiibosListPageComponent
+    AmiibosListPageComponent,
+    AmiiboDetailPageComponent
   ],
   providers: [
     StatusBar,

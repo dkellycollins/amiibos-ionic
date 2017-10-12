@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
+import { AmiiboDetailPageComponent } from '../amiibo-detail-page/amiibo-detail-page.component';
 
 @Component({
   selector: 'amiibos-list-page',
@@ -7,7 +8,7 @@ import { IonicPage } from 'ionic-angular';
 })
 export class AmiibosListPageComponent {
 
-  constructor() {
+  constructor(private _navCtrl: NavController) {
 
   }
 

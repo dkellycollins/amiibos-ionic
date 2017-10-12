@@ -1,0 +1,19 @@
+<ion-card>
+  <img [src]="getImageSrc()" />
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col><strong>Name</strong></ion-col>
+        <ion-col>{{amiibo?.displayName}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><strong>Series</strong></ion-col>
+        <ion-col>{{amiibo?.series?.displayName || 'N/A'}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><strong>Release Date</strong></ion-col>
+        <ion-col>{{(amiibo?.releaseDate | date:'fullDate') || 'N/A'}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
