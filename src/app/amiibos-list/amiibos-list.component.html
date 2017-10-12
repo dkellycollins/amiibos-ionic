@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item *ngFor="let amiibo of (amiibos$ | async)">
+    <ion-avatar item-start>
+      <img [src]="getImageSrc(amiibo)">
+    </ion-avatar>
+    <h2>{{amiibo.displayName}}</h2>
+    <p>{{(amiibo.series && amiibo.series.displayName) || 'N/A'}}</p>
+  </ion-item>
+</ion-list>
